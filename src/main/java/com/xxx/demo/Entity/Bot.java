@@ -4,26 +4,26 @@ import javax.persistence.*;
 
 @Entity(name = "bot")
 public class Bot {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bot_id")
-    int botID;
+            @Id
+            @GeneratedValue(strategy = GenerationType.IDENTITY)
+            @Column(name = "bot_id")
+            int botID;
 
-    @Column
-    String name;
+            @Column
+            String name;
 
-    @Column (name = "introduction ",columnDefinition = "char(200) character set utf8")
-    String introduction;
+            @Column (name = "introduction ",columnDefinition = "char(200) character set utf8")
+            String introduction;
 
-    public Bot(String name, String introduction) {
-        this.name = name;
-        this.introduction = introduction;
-    }
+            public Bot(String name, String introduction) {
+                this.name = name;
+                this.introduction = introduction;
+            }
 
-    @Override
-    public String toString() {
-        return "Bot{" +
-                "botID=" + botID +
+            @Override
+            public String toString() {
+                return "Bot{" +
+                        "botID=" + botID +
                 ", name='" + name + '\'' +
                 ", introduction='" + introduction + '\'' +
                 '}';
